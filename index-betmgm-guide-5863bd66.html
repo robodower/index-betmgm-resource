@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>betmgm · 再次收藏的理由</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf9f7;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1c1a;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .page-wrap {
+            max-width: 680px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 4rem 0 5rem;
+            flex: 1;
+        }
+
+        /* hero 区 */
+        .hero {
+            margin-bottom: 4rem;
+            text-align: left;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: #e4e1dd;
+            color: #4b4743;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: #1f1c19;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #5c5854;
+            max-width: 540px;
+        }
+
+        /* 信息卡片网格 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin: 2.8rem 0 3.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 2rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.2s ease;
+            border: 1px solid #ecebe8;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .card-icon {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: #2b2724;
+            letter-spacing: -0.01em;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4f4b47;
+            margin-bottom: 0.2rem;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 0.6rem;
+            padding-left: 0;
+        }
+
+        .card li {
+            font-size: 0.9rem;
+            color: #5c5854;
+            padding: 0.25rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+        }
+
+        .card li::before {
+            content: '—';
+            color: #b3ada6;
+            font-weight: 300;
+        }
+
+        /* 自然链接段落 */
+        .link-section {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2rem 2rem 2.2rem;
+            border: 1px solid #ecebe8;
+            margin: 2rem 0 2.8rem;
+        }
+
+        .link-section p {
+            font-size: 1rem;
+            color: #3f3b37;
+            margin-bottom: 0.5rem;
+        }
+
+        .link-section a {
+            color: #1e3c5c;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #cbd5e1;
+            transition: border-color 0.2s;
+        }
+
+        .link-section a:hover {
+            border-bottom: 2px solid #1e3c5c;
+        }
+
+        .link-section .muted-note {
+            font-size: 0.85rem;
+            color: #8b8681;
+            margin-top: 0.8rem;
+        }
+
+        /* FAQ 摘要（极简） */
+        .faq-mini {
+            margin: 2.8rem 0 1.5rem;
+            border-top: 1px solid #e3dfdb;
+            padding-top: 2rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d2a26;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-item strong {
+            font-weight: 500;
+            color: #3b3733;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-item p {
+            font-size: 0.88rem;
+            color: #5f5b56;
+        }
+
+        /* 页脚 */
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #9c9792;
+            border-top: 1px solid #eae7e3;
+            padding-top: 1.8rem;
+            text-align: left;
+        }
+
+        /* 响应式 */
+        @media (max-width: 560px) {
+            .page-wrap {
+                padding: 2.5rem 0 3.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 1.5rem 1.5rem 1.8rem;
+            }
+
+            .link-section {
+                padding: 1.5rem 1.5rem 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+
+        <!-- hero -->
+        <div class="hero">
+            <div class="hero-badge">再次收藏·持续关注</div>
+            <h1>回到熟悉的地方<br>发现持续更新的理由</h1>
+            <p>有些页面值得加入书签——不是因为冲动，而是因为每次回来都能找到新的落脚点。这里是一个安静的起点。</p>
+        </div>
+
+        <!-- 用途卡片 -->
+        <div class="card-grid">
+
+            <div class="card">
+                <div class="card-icon">📌</div>
+                <h2>再次访问的锚点</h2>
+                <p>把 <a href="https://index-betmgm.com" style="color:#1e3c5c; text-decoration:none; font-weight:500; border-bottom:1px solid #cbd5e1;">betmgm</a> 放进收藏夹，好比在桌边放一本常翻的册子。不需要时刻惦记，但知道它一直在那，内容慢慢积累。</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧭</div>
+                <h2>适合哪些人</h2>
+                <ul>
+                    <li>习惯随手收藏、定期回顾的浏览者</li>
+                    <li>想要避开信息过载，只保留几个可靠入口</li>
+                    <li>愿意花时间慢慢了解，而不是一次读完</li>
+                    <li>对持续更新、稳定维护的站点有好感</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h2>可以期待什么</h2>
+                <p>页面内容会随着时间自然迭代——结构保持简明，但细节会调整、补充。不会有突然的改版，也不会有多余的弹窗。</p>
+            </div>
+
+        </div>
+
+        <!-- 自然链接段落 -->
+        <div class="link-section">
+            <p>如果你之前来过，大概记得这里的样子。现在回来，会发现一些段落做了微调，但整体节奏没变。保持收藏的习惯，偶尔回来翻翻——<a href="https://index-betmgm.com">betmgm</a> 这个地址一直有效，内容也在慢慢生长。</p>
+            <p class="muted-note">标记一个位置，不需要太多理由。下次想起的时候，直接打开就好。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-mini">
+            <h3>几个你可能想问的</h3>
+            <div class="faq-item">
+                <strong>页面会频繁变动吗？</strong>
+                <p>不会。结构稳定，但会不定期优化表述和视觉细节，保持新鲜感但不打扰。</p>
+            </div>
+            <div class="faq-item">
+                <strong>为什么要收藏而不是直接记住？</strong>
+                <p>收藏是一种轻微的承诺——提醒自己这里有值得再来的内容。尤其当站点持续更新时，书签比记忆可靠。</p>
+            </div>
+            <div class="faq-item">
+                <strong>这个页面就是全部吗？</strong>
+                <p>这是一个介绍和入口，具体内容藏在链接后面。慢慢逛，不用急。</p>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer-note">
+            <span>index-betmgm.com · 保持自然</span>
+        </div>
+
+    </div>
+</body>
+</html>
